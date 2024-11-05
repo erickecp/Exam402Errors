@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    @for (type of types; track $index) {
+      <button (click)="byType(type)" type="button" class="btn btn-light m-1 btnh">{{ type }}</button>
+    }
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    @for( card of cards; track card.id ){
+    <div class="col-sm-3 col-md-3 col-lg-2 col-xl-2 mt-3">
+      <app-tcg-card [pokeCard]="card" ></app-tcg-card>
+    </div>
+  }@empty {
+    <h1 class="mt-5 text-center text-light"> Cargando...</h1>
+  }
+  </div>
+</div>
+

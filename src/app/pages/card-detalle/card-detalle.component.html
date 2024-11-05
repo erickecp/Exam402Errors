@@ -1,0 +1,67 @@
+<div class=" bg-dark rounded-3">
+  <div class="container-fluid ">
+    <div
+      class="row "
+    >
+
+
+    <div class="col-4">
+      <h2 class="text-light text-center fw-bold">{{pokemon.name}}</h2>
+      <img [src]="pokemon?.images?.small" alt="">
+    </div>
+
+    <div class="col-8">
+      <div class="list-group mt-5">
+        <div
+          href="#"
+          class="list-group-item list-group-item-action flex-column align-items-start "
+          aria-current="true"
+        >
+          <div class="d-flex w-100 justify-content-between">
+
+            <h5 class="mb-1">  <i class="fa fa-palette me-1" aria-hidden="true"></i>Artista</h5>
+          </div>
+          <p class="mb-1">{{pokemon.artista}}</p>
+        </div>
+        <div
+          href="#"
+          class="list-group-item list-group-item-action flex-column align-items-start "
+          aria-current="true"
+        >
+          <div class="d-flex w-100 justify-content-between">
+
+            <h5 class="mb-1">
+              <i  class="fas fa-address-book me-1   "></i>
+            Rarity</h5>
+          </div>
+          <p class="mb-1">{{pokemon.rarity}}</p>
+        </div>
+        <div
+          href="#"
+          class="list-group-item list-group-item-action flex-column align-items-start "
+          aria-current="true"
+        >
+          <div class="d-flex w-100 justify-content-between">
+
+            <h5 class="mb-1">
+              <i  class="fas fa-scissors me-1   "></i>
+            Atacks</h5>
+          </div>
+          @for (a of pokemon.attacks; track $index) {
+          <span
+            class="badge bg-warning ms-1"
+            >{{a.name}}</span
+          >}
+
+        </div>
+
+
+
+    </div>
+    </div>
+
+
+
+
+  </div>
+</div>

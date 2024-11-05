@@ -1,0 +1,7 @@
+<div class="card poke-card">
+  <img (click)="goToDetail(pokeCard.id)" [src]="pokeCard?.images?.small" alt="">
+  <h5 class="text-center"> {{pokeCard?.name}} </h5>
+  <p class="text-center">{{pokeCard?.cardmarket?.prices?.averageSellPrice | currency}}</p>
+    <i (click)="addToFavorites(pokeCard)"
+    [class]="inFavorite(pokeCard)" aria-hidden="true"></i>
+</div>

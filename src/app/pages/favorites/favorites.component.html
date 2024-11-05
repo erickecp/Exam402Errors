@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <div class="row">
+    @for( card of getMisFavoritos; track card.id ){
+    <div class="col-sm-3 col-md-3 col-lg-2 col-xl-2 mt-3">
+      <app-tcg-card [pokeCard]="card" ></app-tcg-card>
+    </div>
+  }@empty {
+    <h1 class="mt-5 text-center text-light"> Cargando...</h1>
+  }
+  </div>
+</div>
